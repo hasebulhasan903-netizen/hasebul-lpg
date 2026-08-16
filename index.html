@@ -1,328 +1,808 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hasebul LPG | LPG Gas Cylinder & Services</title>
+<title>Hasebul LPG | Safe & Reliable LPG Solutions</title>
 
-    <meta name="description" content="Hasebul LPG - Reliable LPG gas cylinder supply, home delivery and LPG services.">
-    <meta name="keywords" content="Hasebul LPG, LPG Bangladesh, LPG gas cylinder, LPG delivery, gas cylinder">
-    <meta name="author" content="Hasebul LPG">
+<meta name="description" content="Hasebul LPG provides reliable LPG cylinders, home delivery and commercial LPG solutions in Bangladesh.">
+<meta name="keywords" content="Hasebul LPG, LPG Bangladesh, LPG cylinder, LPG delivery, gas cylinder Bangladesh">
+<meta name="author" content="Hasebul LPG">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
 
-        body {
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.6;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        header {
-            background: #ffffff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+body{
+    background:#f7f8fa;
+    color:#222;
+    line-height:1.6;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #d71920;
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:white;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
 
-        .logo span {
-            color: #222;
-        }
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #222;
-            margin-left: 15px;
-            font-size: 14px;
-        }
+.logo{
+    font-size:27px;
+    font-weight:800;
+    color:#d71920;
+}
 
-        .hero {
-            background: linear-gradient(135deg, #d71920, #ff6b35);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
+.logo span{
+    color:#222;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
+.nav-links{
+    display:flex;
+    gap:25px;
+}
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+.nav-links a{
+    color:#222;
+    text-decoration:none;
+    font-weight:600;
+}
 
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #d71920;
-            padding: 13px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 5px;
-        }
+.nav-links a:hover{
+    color:#d71920;
+}
 
-        .btn-dark {
-            background: #222;
-            color: white;
-        }
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 85% 25%,rgba(255,255,255,.18),transparent 25%),
+    linear-gradient(135deg,#b90008,#e51b23 55%,#ff6b35);
+    color:white;
+}
 
-        section {
-            padding: 55px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.hero-container{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:70px 20px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:40px;
+    align-items:center;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 30px;
-            margin-bottom: 35px;
-            color: #222;
-        }
+.hero h1{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
 
-        .about {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-        }
+.hero h1 span{
+    color:#ffd400;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+.hero p{
+    font-size:20px;
+    max-width:620px;
+    margin-bottom:30px;
+}
 
-        .card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
 
-        .card .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-        }
+.btn-primary{
+    background:white;
+    color:#d71920;
+}
 
-        .price-box {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+.btn-dark{
+    background:#222;
+    color:white;
+}
 
-        .price {
-            font-size: 35px;
-            color: #d71920;
-            font-weight: bold;
-            margin: 15px 0;
-        }
+.btn:hover{
+    transform:translateY(-3px);
+}
 
-        .contact {
-            background: #222;
-            color: white;
-            border-radius: 20px;
-            text-align: center;
-        }
+.cylinder{
+    width:260px;
+    height:390px;
+    margin:auto;
+    border-radius:70px 70px 45px 45px;
+    background:linear-gradient(90deg,#c9c9c9,#f7f7f7,#aaa);
+    box-shadow:20px 25px 45px rgba(0,0,0,.28);
+    position:relative;
+}
 
-        .contact h2 {
-            margin-bottom: 15px;
-        }
+.cylinder:before{
+    content:"";
+    position:absolute;
+    width:85px;
+    height:50px;
+    background:#333;
+    top:-35px;
+    left:87px;
+    border-radius:15px 15px 5px 5px;
+}
 
-        footer {
-            background: #111;
-            color: #aaa;
-            text-align: center;
-            padding: 25px 15px;
-        }
+.cylinder:after{
+    content:"HASEBUL LPG";
+    position:absolute;
+    top:155px;
+    left:35px;
+    width:190px;
+    padding:15px 0;
+    background:#d71920;
+    color:white;
+    text-align:center;
+    font-size:19px;
+    font-weight:bold;
+    transform:rotate(-90deg);
+    border-radius:5px;
+}
 
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
+section{
+    padding:75px 20px;
+}
 
-            nav a {
-                margin: 0 5px;
-                font-size: 12px;
-            }
+.container{
+    max-width:1150px;
+    margin:auto;
+}
 
-            .hero h1 {
-                font-size: 34px;
-            }
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:15px;
+}
 
-            .hero p {
-                font-size: 16px;
-            }
-        }
-    </style>
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-box{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.07);
+}
+
+.about-box h3{
+    color:#d71920;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:32px 24px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    background:#fff0f1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    font-size:21px;
+}
+
+.products{
+    background:#fff;
+}
+
+.product-card{
+    background:#f8f8f8;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    border:1px solid #eee;
+}
+
+.product-cylinder{
+    width:100px;
+    height:160px;
+    margin:0 auto 20px;
+    border-radius:28px;
+    background:linear-gradient(90deg,#bbb,#fff,#aaa);
+    position:relative;
+}
+
+.product-cylinder:after{
+    content:"LPG";
+    position:absolute;
+    top:60px;
+    left:10px;
+    width:80px;
+    background:#d71920;
+    color:white;
+    padding:5px 0;
+    font-weight:bold;
+}
+
+.product-card h3{
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.price{
+    color:#d71920;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.why{
+    background:#f2f4f7;
+}
+
+.contact-section{
+    background:linear-gradient(135deg,#202020,#333);
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-card{
+    background:rgba(255,255,255,.08);
+    padding:35px;
+    border-radius:20px;
+}
+
+.contact-item{
+    margin:18px 0;
+    font-size:17px;
+}
+
+.contact-item strong{
+    color:#ffd400;
+}
+
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer strong{
+    color:white;
+}
+
+.mobile-menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        background:white;
+        flex-direction:column;
+        padding:20px;
+        box-shadow:0 8px 20px rgba(0,0,0,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .mobile-menu{
+        display:block;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .cylinder{
+        width:190px;
+        height:290px;
+    }
+
+    .cylinder:before{
+        left:62px;
+    }
+
+    .cylinder:after{
+        left:0;
+        width:190px;
+        top:115px;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">Hasebul <span>LPG</span></div>
+<div class="navbar">
 
-    <nav>
+    <div class="logo">
+        Hasebul <span>LPG</span>
+    </div>
+
+    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+
+    <nav class="nav-links" id="menu">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
+
+</div>
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero" id="home">
-    <h1>Hasebul LPG</h1>
 
-    <p>
-        Reliable LPG Gas Cylinder Supply & Delivery
-    </p>
+<div class="hero-container">
 
-    <a href="#contact" class="btn">Order LPG</a>
-    <a href="#products" class="btn btn-dark">View Products</a>
+<div>
+
+<h1>
+Powering Your Home With
+<span>Reliable LPG</span>
+</h1>
+
+<p>
+Safe, reliable and convenient LPG cylinder solutions
+for homes, restaurants and businesses.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+Order LPG
+</a>
+
+<a href="#products" class="btn btn-dark">
+View Products
+</a>
+
+</div>
+
+</div>
+
+<div>
+<div class="cylinder"></div>
+</div>
+
+</div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
-    <h2 class="section-title">About Hasebul LPG</h2>
 
-    <div class="about">
-        <p>
-            Welcome to Hasebul LPG. We aim to provide reliable,
-            safe and convenient LPG gas cylinder solutions for
-            households, restaurants and businesses.
-        </p>
-    </div>
+<div class="container">
+
+<h2 class="section-title">
+About Hasebul LPG
+</h2>
+
+<p class="section-subtitle">
+Your trusted partner for reliable LPG solutions.
+</p>
+
+<div class="about-grid">
+
+<div class="about-box">
+
+<h3>Who We Are</h3>
+
+<p>
+Hasebul LPG is focused on providing convenient,
+safe and reliable LPG solutions for households,
+restaurants and commercial customers.
+</p>
+
+<br>
+
+<p>
+Our goal is to make LPG ordering and delivery
+simple, fast and convenient for our customers.
+</p>
+
+</div>
+
+<div class="about-box">
+
+<h3>Our Commitment</h3>
+
+<p>
+We believe customer satisfaction, safety and
+reliable service should always come first.
+</p>
+
+<br>
+
+<p>
+Hasebul LPG aims to build a trusted LPG service
+brand in Bangladesh.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="products">
-    <h2 class="section-title">Our LPG Products</h2>
 
-    <div class="cards">
+<!-- PRODUCTS -->
 
-        <div class="card">
-            <div class="icon">🔥</div>
-            <h3>LPG Cylinder</h3>
-            <p>Quality LPG cylinders for household and commercial use.</p>
-        </div>
+<section class="products" id="products">
 
-        <div class="card">
-            <div class="icon">🏠</div>
-            <h3>Home LPG</h3>
-            <p>Convenient LPG solutions for your home.</p>
-        </div>
+<div class="container">
 
-        <div class="card">
-            <div class="icon">🏪</div>
-            <h3>Commercial LPG</h3>
-            <p>LPG solutions for restaurants and businesses.</p>
-        </div>
+<h2 class="section-title">
+Our LPG Products
+</h2>
 
-    </div>
+<p class="section-subtitle">
+Choose the LPG cylinder solution that fits your needs.
+</p>
+
+<div class="cards">
+
+<div class="product-card">
+
+<div class="product-cylinder"></div>
+
+<h3>12 KG LPG</h3>
+
+<p>Suitable for household use.</p>
+
+<div class="price">
+Contact for Price
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-cylinder"></div>
+
+<h3>25 KG LPG</h3>
+
+<p>Ideal for restaurants and businesses.</p>
+
+<div class="price">
+Contact for Price
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-cylinder"></div>
+
+<h3>35 KG LPG</h3>
+
+<p>Commercial LPG solution.</p>
+
+<div class="price">
+Contact for Price
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- SERVICES -->
 
 <section id="services">
-    <h2 class="section-title">Our Services</h2>
 
-    <div class="cards">
+<div class="container">
 
-        <div class="card">
-            <div class="icon">🚚</div>
-            <h3>Home Delivery</h3>
-            <p>Fast and convenient LPG cylinder delivery.</p>
-        </div>
+<h2 class="section-title">
+Our Services
+</h2>
 
-        <div class="card">
-            <div class="icon">📞</div>
-            <h3>Customer Support</h3>
-            <p>Contact us for LPG orders and information.</p>
-        </div>
+<p class="section-subtitle">
+Reliable LPG services designed around your needs.
+</p>
 
-        <div class="card">
-            <div class="icon">🛡️</div>
-            <h3>Safety First</h3>
-            <p>We focus on safe and reliable LPG solutions.</p>
-        </div>
+<div class="cards">
 
-    </div>
-</section>
+<div class="card">
 
-<section>
-    <h2 class="section-title">LPG Price</h2>
+<div class="icon">🚚</div>
 
-    <div class="price-box">
-        <h3>Current LPG Cylinder Price</h3>
+<h3>Home Delivery</h3>
 
-        <div class="price">
-            Contact Us
-        </div>
+<p>
+Convenient LPG cylinder delivery to your home.
+</p>
 
-        <p>
-            Please contact Hasebul LPG for the latest price.
-        </p>
-    </div>
-</section>
+</div>
 
-<section id="contact">
 
-    <div class="contact">
+<div class="card">
 
-        <h2>Contact Hasebul LPG</h2>
+<div class="icon">🏪</div>
 
-        <p>
-            📞 Phone: 01XXXXXXXXX
-        </p>
+<h3>Commercial Supply</h3>
 
-        <p>
-            📧 Email: info@hasebullpg.com
-        </p>
+<p>
+LPG solutions for restaurants and businesses.
+</p>
 
-        <p>
-            📍 Bangladesh
-        </p>
+</div>
 
-        <br>
 
-        <a href="tel:+8801XXXXXXXXX" class="btn">
-            Call Now
-        </a>
+<div class="card">
 
-    </div>
+<div class="icon">🛡️</div>
+
+<h3>Safety First</h3>
+
+<p>
+Safety-focused LPG solutions for our customers.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
+
+
+<!-- WHY US -->
+
+<section class="why">
+
+<div class="container">
+
+<h2 class="section-title">
+Why Choose Hasebul LPG?
+</h2>
+
+<p class="section-subtitle">
+We focus on quality service, convenience and customer satisfaction.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">✓</div>
+<h3>Reliable</h3>
+<p>Dependable LPG solutions for everyday needs.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Fast Service</h3>
+<p>Quick response for LPG orders and inquiries.</p>
+</div>
+
+<div class="card">
+<div class="icon">❤️</div>
+<h3>Customer First</h3>
+<p>Your satisfaction is important to us.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Hasebul LPG
+</h2>
+
+<p class="section-subtitle" style="color:#ccc;">
+Need an LPG cylinder? Contact us today.
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Get In Touch</h3>
+
+<div class="contact-item">
+<strong>📞 Phone:</strong><br>
+01XXXXXXXXX
+</div>
+
+<div class="contact-item">
+<strong>💬 WhatsApp:</strong><br>
+01XXXXXXXXX
+</div>
+
+<div class="contact-item">
+<strong>📧 Email:</strong><br>
+info@hasebullpg.com
+</div>
+
+<div class="contact-item">
+<strong>📍 Location:</strong><br>
+Bangladesh
+</div>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>Order LPG</h3>
+
+<p style="margin:15px 0;">
+For LPG orders and delivery information,
+please contact us directly.
+</p>
+
+<div class="buttons">
+
+<a href="tel:+8801XXXXXXXXX"
+class="btn btn-primary">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/8801XXXXXXXXX"
+class="btn btn-dark">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 
 <footer>
 
-    <p>
-        © 2026 Hasebul LPG. All Rights Reserved.
-    </p>
+<p>
+© 2026 <strong>Hasebul LPG</strong>. All Rights Reserved.
+</p>
+
+<p>
+Reliable LPG Solutions in Bangladesh
+</p>
 
 </footer>
+
+
+<script>
+
+function toggleMenu(){
+
+    document.getElementById("menu")
+    .classList.toggle("active");
+
+}
+
+</script>
 
 </body>
 </html>
