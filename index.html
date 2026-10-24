@@ -3156,6 +3156,108 @@ document.getElementById("currentYear").textContent=
 applyLanguage();
 
 </script>
+<!-- HASEBUL LPG BACKGROUND MUSIC -->
 
+<audio id="hasebulMusic" loop preload="none">
+    <source src="welcome.mp3" type="audio/mpeg">
+</audio>
+
+<style>
+.music-control {
+    position: fixed;
+    right: 17px;
+    bottom: 210px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #ffcf45;
+    background: linear-gradient(135deg, #d71920, #900010);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-control.playing {
+    animation: musicPulse 2s infinite;
+}
+
+@keyframes musicPulse {
+    0%,100% {
+        box-shadow: 0 0 0 0 rgba(215,25,32,.5);
+    }
+    50% {
+        box-shadow: 0 0 0 12px rgba(215,25,32,0);
+    }
+}
+
+@media(max-width:760px) {
+    .music-control {
+        bottom: 205px;
+        right: 17px;
+        width: 48px;
+        height: 48px;
+    }
+}
+</style>
+
+<button
+    id="musicControl"
+    class="music-control"
+    type="button"
+    onclick="toggleHasebulMusic()"
+    aria-label="Play background music">
+    🔇
+</button>
+
+<script>
+const hasebulMusic = document.getElementById("hasebulMusic");
+const musicControl = document.getElementById("musicControl");
+
+hasebulMusic.volume = 0.35;
+
+function updateMusicControl() {
+    const playing = !hasebulMusic.paused;
+
+    musicControl.textContent = playing ? "🎵" : "🔇";
+    musicControl.classList.toggle("playing", playing);
+
+    musicControl.setAttribute(
+        "aria-label",
+        playing ? "Pause background music" : "Play background music"
+    );
+}
+
+async function toggleHasebulMusic() {
+    if (hasebulMusic.paused) {
+        try {
+            await hasebulMusic.play();
+        } catch (error) {
+            console.log("Music playback blocked:", error);
+        }
+    } else {
+        hasebulMusic.pause();
+    }
+
+    updateMusicControl();
+}
+
+window.addEventListener("load", async function() {
+    try {
+        await hasebulMusic.play();
+    } catch (error) {
+        // Browser requires user interaction.
+    }
+
+    updateMusicControl();
+});
+
+hasebulMusic.addEventListener("play", updateMusicControl);
+hasebulMusic.addEventListener("pause", updateMusicControl);
+</script>
 </body>
 </html>
